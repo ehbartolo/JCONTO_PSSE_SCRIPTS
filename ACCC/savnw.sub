@@ -1,0 +1,37 @@
+// savnw.sub
+//add all areas scale load suffix _LD
+//add all areas scale generation suffix _ScGen with pmax greater 50 mw
+//add all areas for import suffix _imp with pmax greater 50 mw
+//add all areas for export with pmax greater 50 mw
+subsystem LIGHTCO
+ area 2
+end
+
+subsystem SRC_LIGHTCO
+ area 1
+ area 5
+end
+
+subsystem WORLD
+ area 5
+end
+
+subsystem SRC_WORLD
+ area 1
+ area 2
+end
+
+subsystem FLAPCO
+ area 1
+end
+
+subsystem SRC_FLAPCO
+ area 2
+ area 5
+end
+
+subsystem WHOLESYS
+ areas 1 99
+end
+
+END

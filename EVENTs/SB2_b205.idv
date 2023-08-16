@@ -1,0 +1,13 @@
+@![PSSe 30 - switching event]
+@! SB2_b205.idv - MON, NOV 06 2006 - 15:26
+@! 5 cycle 3-phase fault at bus SUB230      230.00kV with clear by branch(es) outage:
+@! 154 DOWNTN       230    205 SUB230       230 1
+@!  MENU,OFF      /* FORCE MENU TO CORRECT STATUS
+RUN
+1.0,99,15,99
+BAT_DIST_BUS_FAULT, 205, 1, 230.0, 0.0, -2000000000.0 ;
+RUN
+1.06667,15,15,99
+BAT_DIST_CLEAR_FAULT, 1 ;
+BAT_DIST_BRANCH_TRIP,  154 , 205 ,"1" ;
+@END

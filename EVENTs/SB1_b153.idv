@@ -1,0 +1,13 @@
+@![PSSe 30 - switching event]
+@! SB1_b153.idv - MON, NOV 06 2006 - 15:26
+@! 5 cycle 3-phase fault at bus MID500      500.00kV with clear by branch(es) outage:
+@! 152 MID500       500    153 MID230       230 1
+@!  MENU,OFF      /* FORCE MENU TO CORRECT STATUS
+RUN
+1.0,99,15,99
+BAT_DIST_BUS_FAULT, 153, 1, 500.0, 0.0, -2000000000.0 ;
+RUN
+1.066667,15,15,99
+BAT_DIST_CLEAR_FAULT, 1 ;
+BAT_DIST_BRANCH_TRIP,  152 , 153 ,"1" ;
+@END

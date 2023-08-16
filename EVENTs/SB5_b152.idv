@@ -1,0 +1,13 @@
+@![PSSe 30 - switching event]
+@!  SB5_b152.idv FRI, FEB 22 2008 - 22:02
+@! 5 cycle 3-phase fault with clear by branch outage
+@! MID500      500.00kV A1Z1 -WEST        500.00kV A5Z51
+MENU,OFF      /* FORCE MENU TO CORRECT STATUS
+RUN
+1.0,99,15,99
+BAT_DIST_BUS_FAULT, 152, 1, 500.0, 0.0, -2000000000.0 ;
+RUN
+1.06667,15,3,99
+BAT_DIST_CLEAR_FAULT, 1 ;
+BAT_DIST_BRANCH_TRIP, 152, 3004, "1" ;
+@END

@@ -1,0 +1,16 @@
+@![PSSe 30 - switching event]
+@! SB6_b201.idv - MON, NOV 06 2006 - 15:26
+@! 5 cycle 3-phase fault at bus HYDRO       500.00kV with clear by branch(es) outage:
+@! NUCPANT     500.00KV A1 Z1 - HYDRO       500.00KV A2 Z2
+@! MID500      500.00KV A1 Z1 - EAST500     500.00KV A2 Z2
+@!  MENU,OFF      /* FORCE MENU TO CORRECT STATUS
+RUN
+1.0,99,15,99
+BAT_DIST_BUS_FAULT, 201, 1, 500.0, 0.0, -2000000000.0 ;
+RUN
+1.06667,15,15,99
+BAT_DIST_CLEAR_FAULT, 1 ;
+BAT_DIST_BRANCH_TRIP,  151 , 201 ,"1" ;
+BAT_DIST_BRANCH_TRIP,  152 , 202 ,"1" ;
+TEXT EOF
+@END

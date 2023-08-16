@@ -1,0 +1,14 @@
+@![PSSe 30 - switching event]
+@! SB4_b203.idv - MON, NOV 06 2006 - 15:26
+@! 5 cycle 3-phase fault at bus EAST230     230.00kV with clear by branch(es) outage:
+@! 202 EAST500      500    203 EAST230      230 1
+@!  MENU,OFF      /* FORCE MENU TO CORRECT STATUS
+RUN
+1.0,99,15,99
+BAT_DIST_BUS_FAULT, 203, 1, 230.0, 0.0, -2000000000.0 ;
+RUN
+1.08333,15,15,99
+BAT_DIST_CLEAR_FAULT, 1 ;
+BAT_DIST_BRANCH_TRIP,  202 , 203 ,"1" ;
+TEXT EOF
+@END

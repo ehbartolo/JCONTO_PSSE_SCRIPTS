@@ -1,0 +1,16 @@
+@![PSSe 30 - switching event]
+@! SB5_b3006.idv - MON, NOV 06 2006 - 15:26
+@! 5 cycle 3-phase fault at bus UPTOWN      230.00kV with clear by branch(es) outage:
+@! WEST        500.00KV A5 Z5 - MID500      500.00KV A1 Z1
+@! UPTOWN      230.00KV A5 Z5 - MID230      230.00KV A1 Z1
+@!  MENU,OFF      /* FORCE MENU TO CORRECT STATUS
+RUN
+1.0,99,15,99
+BAT_DIST_BUS_FAULT, 3006, 1, 230.0, 0.0, -2000000000.0 ;
+RUN
+1.06667,15,15,99
+BAT_DIST_CLEAR_FAULT, 1 ;
+BAT_DIST_BRANCH_TRIP,  3004 , 152 ,"1" ;
+BAT_DIST_BRANCH_TRIP,  3006 , 153 ,"1" ;
+TEXT EOF
+@END

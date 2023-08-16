@@ -1,0 +1,34 @@
+// CMLDBLU2_b18_154-1.dyr - beta
+// Load Dynamic Models
+////////////////////////////////////////////////////////////////////////////
+//0     'USRLOD'  '*'  'CMLDALU2'  12 5  2  133  27  146  48
+//0     'USRLOD'  '*'  'CMLDARU2'  12 4  2  133  27  146  48
+//0     'USRLOD'  '*'  'CMLDZNU2'  12 3  2  133  27  146  48
+//0     'USRLOD'  '*'  'CMLDOWU2'  12 2  2  133  27  146  48
+154     'USRLOD'  '1'  'CMLDBLU2'  12 1  2  133  27  146  48
+@!ICON  M   M+1
+        0   0
+@!+0    MVA   Sub_B  Rfdr Xfdr Fb   Xxf  Tfixhs Tfixls LTC_flg Tmin Tmax Tstep   Vmin  Vmax TD TC Rcmp Xcmp
+        -1.25  0.0   0.04 0.04 0.75 0.08 1      1      0       0.9  1.1  0.00625 1.025 1.04 30 5  0    0
+@!+18   FmA     FmB     FmC   FmD     Fel                   
+        0.2     0.1     0.05  0.2     0.15
+@!+23   PFel    Vd1     Vd2   PFs
+        1.0     0.65    0.5   1.0
+@!+27   P1e     P1c     P2e   P2c     Pfrq
+        2       0.3     1     0.7     0   
+@!+32   Q1e     Q1c     Q2e   Q2c     Qfrq
+        2      -0.5     1     1.5     -1
+@!mA+37 Mtyp LFm  Ra   Ls  Lp   Lpp   Tpo   Tppo   H   etrq Vtr1 Ttr1 Ftr1 Vrc1 Trc1  Vtr2 Ttr2   Ftr2 Vrc2 Trc2         
+        3    0.75 0.04 1.8 0.12 0.104 0.095 0.0021 0.1 0    0.65  0.1 0.2  0.1  9999  0.5  0.02   0.75 0.65  0.1
+@!mB+57 Mtyp LFm  Ra   Ls  Lp   Lpp   Tpo   Tppo   H   etrq Vtr1 Ttr1 Ftr1 Vrc1 Trc1  Vtr2 Ttr2   Ftr2 Vrc2 Trc2         
+        3    0.75 0.03 1.8 0.19 0.14  0.2   0.0026 0.5 2    0.55 0.02 0.3  0.65 0.05  0.5  0.0255 0.3  0.60 0.05
+@!mC+77 Mtyp LFm  Ra   Ls  Lp   Lpp   Tpo   Tppo   H   etrq Vtr1 Ttr1 Ftr1 Vrc1 Trc1  Vtr2 Ttr2   Ftr2 Vrc2 Trc2         
+        3    0.75 0.03 1.8 0.19 0.14  0.2   0.0026 0.1 2    0.58 0.03 0.2  0.68 0.05  0.53 0.03   0.3  0.62 0.05
+@!mD+97 Tstall Trest Tv    Tf   CompLF CompPF Vstall Rstall Xstall LFadj               
+        0.0666 0.3   0.025 0.1  1      0.98   0.45   0.1    0.1    0
+@!+107  Kp1    Np1   Kq1   Nq1  Kp2    Np2    Kq2    Nq2 
+        0      1     6     2    12     3.2   11      2.5
+@!+115  Vbrk   Frst  Vrst  CmpKpf CmpKqf Vc1off Vc2off Vc1on Vc2on Tth  Th1t   Th2t Fuvr  UVtr1  Ttr1 UVtr2 TTr2  
+        0.86   0.2   0.95  1.0    -3.3   0.5    0.4    0.65  0.55  15   0.7    1.9  0.025 0.5    0.02 0.1   9999
+@!+132  elf CON J+132 = fraction of electronic loads that drop if V < Vd2 (was previously hard coded)
+        0.3     / CMLDBLU2_b18 @b154 LOAD
